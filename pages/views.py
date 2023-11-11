@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView
 from .models import Pokenea
+from django import forms
+from django.views import View
 
 # Create your views here.
 class HomePageView(TemplateView):
@@ -36,5 +38,35 @@ class PokeneaShowView(TemplateView):
 
     return render(request, self.template_name, viewData)
 
+class PokeneaForm(forms.ModelForm):
+  class Meta:
+    model = Pokenea
+    fields = ['name', 'height', 'skill', 'image', 'phrase']
 
+class PokeneaCreateView(View):
+  print("PokeneaCreateView")
+  template_name = 'pokeneas/create.html'
+
+  def get(self, request):
+    form = PokeneaForm()
+    viewData = {}
+    viewData["title"] = "Create pokenea"
+    viewData["form"] = form
+    return render(request, self.template_name, viewData)
+
+  def post(self, request):
+    form = PokeneaForm(request.POST)
+    if form.is_valid(): 
+      form.save()
+      viewData = {
+        "title": "Create pokenea", 
+        "form": form, 
+        "success_message": "Pokenea created"
+        }
+      return render(request, self.template_name, viewData)
+    else:
+      viewData = {}
+      viewData["title"] = "Create pokenea"
+      viewData["form"] = form
+      return render(request, self.template_name, viewData)
 

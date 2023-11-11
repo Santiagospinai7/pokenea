@@ -1,16 +1,16 @@
 {% extends 'pages/base.html' %}
-{%  block title %}Home Page - Taller 1{% endblock %}
+{%  block title %}Pokeneas - Taller 2{% endblock %}
 {% block content %}
 <div class="text-center ">
-  <h1 class="brown-color "> Tecnicas de café </h1>
-  <p class="brown-color">Aprende a preparar un buen café</p>
+  <h1 class="brown-color "> Pokeneas </h1>
+  <p class="brown-color">El maravilloso mundo de los neas</p>
   <div class="d-flex justify-content-between mt-5 flex-row">
-    {% comment %} <div>
-      <a href="{% url 'form' %}" class="btn brown-button">Nueva Tecnica</a>
+    <div>
+      <a href="{% url 'pokenea_form' %}" class="btn brown-button">Nuevo Pokenea</a>
     </div>
     <div>
-      <a href="{% url 'techniques' %}" class="btn brown-button">Lista de Tecnicas</a>
-    </div> {% endcomment %}
+      <a href="{% url 'pokeneas' %}" class="btn brown-button">Lista de Pokeneas</a>
+    </div> 
   </div>
 </div>
 {% endblock %}
