@@ -1,0 +1,19 @@
+{% extends 'pages/base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+
+{% block content %}
+<div class="techniques-container">
+  {% for pokenea in pokeneas %}
+  <div class="card">
+    <img src={{ pokenea.image }} class="card-img-top img-card">
+    <div class="card-body text-center">
+      <a href="{% url 'pokenea_show' pk=pokenea.id %}"
+        class="btn bg-primary text-white">{{pokenea.name}}
+      </a>
+      {% comment %} <p>{{ pokenea.name }}</p> {% endcomment %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

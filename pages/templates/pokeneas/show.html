@@ -1,0 +1,38 @@
+{% extends 'pages/base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src={{ pokenea.image }} class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title">
+           {{pokenea.name}}
+        </h2>
+        <div class="flex">
+          <p style="display: inline; margin-right: 20px;">
+            <strong>Height: </strong>{{pokenea.height}}
+          </p>
+          <p style="display: inline;">
+            <strong>skill: </strong>{{pokenea.skill}}
+          </p>
+        </div>
+        <p>
+          <strong>phrphrasease: </strong>{{pokenea.phrase}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %} <div class="d-flex justify-content-center">
+  <form action="{% url 'delete' pokenea.id %}" method="POST">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this pokenea?')">Delete</button>
+  </form>
+</div> {% endcomment %}
+
+{% endblock %}
