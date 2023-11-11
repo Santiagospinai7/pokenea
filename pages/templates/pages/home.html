@@ -1,0 +1,16 @@
+{% extends 'pages/base.html' %}
+{%  block title %}Home Page - Taller 1{% endblock %}
+{% block content %}
+<div class="text-center ">
+  <h1 class="brown-color "> Tecnicas de café </h1>
+  <p class="brown-color">Aprende a preparar un buen café</p>
+  <div class="d-flex justify-content-between mt-5 flex-row">
+    {% comment %} <div>
+      <a href="{% url 'form' %}" class="btn brown-button">Nueva Tecnica</a>
+    </div>
+    <div>
+      <a href="{% url 'techniques' %}" class="btn brown-button">Lista de Tecnicas</a>
+    </div> {% endcomment %}
+  </div>
+</div>
+{% endblock %}
