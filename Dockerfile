@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Specify the command to run the Django app
-CMD ["python", "manage.py", "runserver", "8080"]
+CMD ["python", "manage.py", "runserver"]
