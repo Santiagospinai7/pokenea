@@ -12,5 +12,5 @@ RUN pip install -r requirements.txt
 # Expose the required port
 EXPOSE 8080
 
-# Specify the command to run the Flask app
-CMD ["python", "manage.py"]
+# Specify the command to run the Django app
+CMD ["python", "manage.py", "runserver"]
