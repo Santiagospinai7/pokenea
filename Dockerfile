@@ -8,14 +8,7 @@ WORKDIR /usr/src/pokenea_project
 COPY . .
 
 # Install Django
-RUN pip install Django
-# Install django framework
-RUN pip install djangorestframework
-# Install factory
-RUN pip install reportlab
-RUN pip install xlwt
-
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Expose the required port
 EXPOSE 8000
