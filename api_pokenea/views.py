@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .serializer import PokeneaSerializer
-from .models import Pokenea
+from pages.models import Pokenea
 
 
 class PokeneaViewSet(viewsets.ModelViewSet):
