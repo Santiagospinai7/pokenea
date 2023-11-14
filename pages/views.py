@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from .models import Pokenea
 from django import forms
 from django.views import View
+import os
 
 # Create your views here.
 class HomePageView(TemplateView):
@@ -33,8 +34,9 @@ class PokeneaShowView(TemplateView):
     viewData = {}
     pokenea = Pokenea.objects.get(pk=pokenea_id)
     viewData['title'] = pokenea.name
-    viewData['subtitle'] = 'Pokenea Details'
+    viewData['subtitle'] = 'Pokenea Detail'
     viewData['pokenea'] = pokenea
+    viewData['container_id'] = os.uname()[1]
 
     return render(request, self.template_name, viewData)
 
