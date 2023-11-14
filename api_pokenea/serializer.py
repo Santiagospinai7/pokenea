@@ -5,4 +5,4 @@ from pages.models import Pokenea
 class PokeneaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pokenea
-        fields = '__all__'
+        fields = ['id', 'name', 'height', 'skill']
