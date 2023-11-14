@@ -1,5 +1,5 @@
 .bg-secondary {
-  background-color: #00bcbc !important;
+  background-color: #e2ffff !important;
 }
 
 .copyright {
@@ -10,7 +10,11 @@
   background-color: #00bcbc !important;
 }
 
-.brown-color {
+/* .brown-color {
+  color: #00bcbc !important;
+} */
+
+.blue-color {
   color: #00bcbc !important;
 }
 
@@ -22,7 +26,7 @@
 
 .brown-button:hover {
   transform: scale(1.1);
-  color: #00bcbc !important;
+  color: #f7f7f7 !important;
 }
 
 nav{
@@ -67,7 +71,7 @@ body {
 }
 
 .footer {
-  background-color: #d0d0d0;
+  background-color: #00bcbc;
   color: #403233;
   text-align: center;
   padding: 10px 0;
